@@ -1,37 +1,39 @@
 function checkForm() {
     clearErrors();
 
-    const firstName = document.getElementById("firstname").ariaValueMax;
-    const lastName = document.getElementById("lastName").ariaValueMax;
-    const email = document.getElementById("email").ariaValueMax;
-    const dreamCar = document.getElementById("dreamCar").ariaValueMax;
+    const firstName = document.getElementById("firstname").value;
+    const lastName = document.getElementById("lastName").value;
+    const email = document.getElementById("email").value;
+    const dreamCar = document.getElementById("dreamCar").value;
 
     let formIsValid = true;
 
     if (firstName === "") {
-        showError("firstname", "First name is required. ");
+        showError("firstname", "First name is required.");
         formIsValid = false;
     }
     
     if (lastName === "") {
-        showError("lastName", "Last name is required. ")
+        showError("lastName", "Last name is required.");
         formIsValid = false;
     }
 
     if (email === "") {
-        showError("email", "Email is required. ");
+        showError("email", "Email is required.");
         formIsValid = false;
-      } else if (!validateEmail(email)) {
-        showError("email", "Please enter a valid email address. ");
+    } else if (!validateEmail(email)) {
+        showError("email", "Please enter a valid email address.");
         formIsValid = false;
-      }
+    }
     
-      if (dreamCar === "") {
-        showError("dreamCar", "Dream car is required. ");
+    if (dreamCar === "") {
+        showError("dreamCar", "Dream car is required.");
         formIsValid = false;
-      }
-      return formIsValid;
+    }
+
+    return formIsValid;
 }
+
 
 function showError(fieldId, message) {
     const field = document.getElementById(fieldId);
