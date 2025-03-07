@@ -59,3 +59,12 @@ input {
 #submit input:hover {
     background: #cc0000;
 }
+.name-fields {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.name-fields input {
+    width: 48%; 
+}
