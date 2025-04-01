@@ -32,7 +32,7 @@ img{
     margin-right: auto;
 }
 label {
-    display: #000;
+    display: block;
     font-weight: bold;
     margin-top: 10px;
     color: #ff0000;
