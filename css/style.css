@@ -37,6 +37,18 @@ img {
     margin-right: auto;
 }
 
+@media (min-width: 1024px) {
+    .signup-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input {
+        width: 70%;
+    }
+}
+
 label {
     display: block;
     font-weight: bold;
